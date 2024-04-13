@@ -1,0 +1,20 @@
+
+
+#container{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+#container figcaption{
+    position: absolute;
+    width: 100%;
+    top: 85%;
+    left: 30%;
+    font-size: 40px;
+    color: var(--card-color);
+    text-shadow: 0px 0px 5px black;
+}
+
+.banner-img{
+    width: 100%;
+}

@@ -1,0 +1,24 @@
+
+.footer-body{
+    background-color: var(--card-color);
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    padding: 1rem;
+    justify-content: space-evenly;
+}
+
+.logo-text{
+    text-align: center;
+}
+.logo-text p{
+    font-size: .9rem;
+}
+
+.copyright{
+    margin: 0;
+}
+
+.icons h6{
+    text-align: center;
+}
