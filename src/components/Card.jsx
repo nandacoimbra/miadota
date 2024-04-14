@@ -6,7 +6,7 @@ export default function Card({objPet}) {
     return (
         <>
             <section className='card_body' key={objPet.id}>
-                <div>
+                <div className='img-container'>
                     <img src={objPet.petImg} alt="" className='pet_image' />
                 </div>
                 <div className='card_footer'>

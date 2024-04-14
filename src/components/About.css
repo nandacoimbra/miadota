@@ -1,0 +1,47 @@
+.about-us {
+    width: 100%;
+    display: flex;
+    padding: 2rem;
+}
+
+.about-home{
+    width: 100%;
+    display: flex;
+}
+
+.about-text{
+    width: 60%;
+}
+
+.about-imgs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "img-1 img-1 img-3 img-3"
+        "img-1 img-1 img-3 img-3"
+        "img-2 img-2 img-3 img-3"
+        "img-2 img-2 img-3 img-3";
+}
+
+
+.img-1 {
+    grid-area: img-1;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.img-3 {
+    grid-area: img-3;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.img-2 {
+    grid-area: img-2;
+    max-width: 100%;
+    max-height: 100%;
+}
+

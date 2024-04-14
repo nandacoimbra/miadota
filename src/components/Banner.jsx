@@ -5,10 +5,13 @@ export default function Banner() {
     return (
 
 
-        <figure id="container" >
+       <div className="container-fluid">
+       <figure id="container" >
             <img src={bannerImg1} className='banner-img'/>
             <figcaption>Seu melhor amigo está aqui!</figcaption>
         </figure>
+        
+       </div>
         // <header>
         //     <img src={bannerImg1} alt="" className='banner-img'/>
         //     <h5>Seu melhor amigo está aqui!</h5>

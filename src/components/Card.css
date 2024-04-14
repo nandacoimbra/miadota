@@ -1,6 +1,7 @@
 .card_body {
     border: 2px solid transparent;
     width: 300px;
+    height: auto;
     margin: 2rem;
     box-shadow: inset 0 -3em 3em rgba(235, 241, 235, 0.3),
         0 0 0 2px var(--card-color),
@@ -9,41 +10,74 @@
     border-radius: 8px;
 }
 
-.pet_image {
-    block-size: fit-content;
+.img-container {
+    border-radius: 8px;
+    border: 1px solid gray;
     width: 100%;
+    /* Garante que o container tenha a largura máxima disponível */
+    height: 50%;
+    overflow: hidden;
+    /* Esconde qualquer parte da imagem que ultrapasse os limites do container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container img {
+    /* width: 100%; */
+    /* Garante que a imagem ocupe toda a largura do container */
+
+    height: 300px;
+    /* Garante que a imagem ocupe toda a altura do container */
+    object-fit: cover; 
+    /* Mantém a proporção da imagem e a corta para preencher o container */
+}
+
+/* .pet_image {
+    max-width: 100%;
+    height: auto;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
+.img-container {
+    width: 100%;
+    height: auto; 
+    overflow: hidden; 
+  } */
 
-.card_footer{
+
+.card_footer {
     margin: 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-.card_footer h6{
+
+.card_footer h6 {
     margin: 0;
     font-weight: bold;
 }
-.card_footer .pet_sex{
+
+.card_footer .pet_sex {
     font-size: 0.9rem;
     color: #028090;
     font-weight: bold;
-    
+
 }
 
-.card_footer .pet_local{
+.card_footer .pet_local {
     display: flex;
     align-items: center;
     gap: .5rem;
-    
+
 }
-.card_footer .pet_local p{
+
+.card_footer .pet_local p {
     margin: 0;
-    
+
 }
-.card_footer a{
+
+.card_footer a {
     display: flex;
     align-items: center;
     justify-content: center;

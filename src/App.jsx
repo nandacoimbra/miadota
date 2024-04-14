@@ -4,6 +4,7 @@ import Banner from './components/Banner.jsx';
 import Card from './components/Card.jsx';
 import Footer from './components/Footer.jsx';
 import CadastroPet from './components/CadastroPet.jsx';
+
 import './global.css';
 import './App.css';
 import nick from './assets/adoption_cats/nick.jpg';
@@ -11,6 +12,9 @@ import timtim from './assets/adoption_cats/timtim.jpg';
 import pingo from './assets/adoption_cats/pingo.jpg';
 import luna from './assets/adoption_cats/luna.jpg';
 import { useState } from 'react';
+import LogIn from './components/LogIn.jsx';
+import About from './components/About.jsx';
+
 
 
 export function App() {
@@ -51,17 +55,19 @@ export function App() {
     }
   ])
 
-  
 
-  
-  function addPet(newPet){
-    setPets([...pets,newPet])
+
+
+  function addPet(newPet) {
+    setPets([...pets, newPet])
   }
 
   return (
 
     <>
       <Navbar />
+
+     
       <Banner />
 
       <section className='pets'>
@@ -74,7 +80,11 @@ export function App() {
 
       </section>
 
-      <CadastroPet onSubmit={addPet}/>
+      <CadastroPet onSubmit={addPet} />
+
+      <LogIn />
+
+      <About />
 
       <Footer />
 
