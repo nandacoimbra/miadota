@@ -28,8 +28,18 @@
 .change-color ul li{
    
     padding: 0 1rem;
-   
     
+}
+
+.nav-link{
+    color: black !important;
+}
+.nav-link:hover {
+    color: grey !important;
+    text-decoration: underline;
+    /* espaçamento entre texto underline */
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
 }
 
 
