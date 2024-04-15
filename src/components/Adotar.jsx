@@ -1,5 +1,7 @@
 import React from 'react'
 import './LogIn.css';
+import './Adotar.css';
+import { Cat,Dog,Heart } from "phosphor-react";
 
 const Adotar = () => {
   return (
@@ -9,9 +11,11 @@ const Adotar = () => {
       <section className='login-success'>
         <h3>Seu interesse no pet foi registrado!</h3>
         <br />
+        <Heart className='logo'size={50}/>
+        <br />
         <p>Aguarde nossa equipe entrar em contato.</p>
       </section>
-        
+
     </section>
   )
 }

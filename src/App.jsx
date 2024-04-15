@@ -106,13 +106,6 @@ export function App() {
       </section>
 
 
-
-      {/* <CadastroPet onSubmit={addPet} /> */}
-
-
-
-      {/* <About /> */}
-
       <Footer />
 
     </main>
