@@ -1,3 +1,8 @@
+
+.cadastro-page{
+    width: 100%;
+    padding: 5rem;
+}
 .cadastro {
     border: 2px solid transparent;
     width: 25rem;
@@ -11,8 +16,8 @@
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    overflow-wrap: break-word;
+    /* flex-wrap: wrap;
+    overflow-wrap: break-word; */
 }
 
 .cadastro-form,

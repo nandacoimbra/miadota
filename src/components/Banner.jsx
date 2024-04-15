@@ -18,13 +18,6 @@ export default function Banner() {
             </div>
             </div>
         </section>
-    //    <div className="container-fluid">
-    //    <figure id="container" >
-    //         <img src={bannerImg1} className='banner-img'/>
-    //         <figcaption>Seu melhor amigo está aqui!</figcaption>
-    //     </figure>
-        
-    //    </div>
        
     )
 }

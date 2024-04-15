@@ -1,40 +1,35 @@
 import { useState, useRef, useEffect } from 'react';
+import {Link} from 'react-router-dom'
 import './LogIn.css';
 
-export default function LogIn() {
+export default function LogIn({logged, setLogged}) {
 
     const userRef = useRef('');
-    // const errRef = useRef();
-
     const [user, setUser] = useState('');
     const [password, setPassword] = useState('');
-    const [errorMsg, setErrorMsg] = useState('');
-    const [success, setSuccess] = useState(false);
+    
 
-    // useEffect(() => {
-    //     userRef.current.focus();
-    // }, [])
-    // useEffect(() => {
-    //     setErrorMsg('');
-    // }, [user, password])
+ 
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         console.log(user, password);
         setUser('');
         setPassword('');
-        setSuccess(true);
+        setLogged(true);
     }
 
 
     return (
 
-        <>
-            {success ? (
+        <section className='login-page'>
+
+            <h3>Efetuar Log In</h3>
+            {logged ? (
                 <section className='login-success'>
                     <h3>Você está logado!</h3>
                     <br />
-                    <a href="#">Cadastre o Pet</a>
+                    <Link to='/cadastro'>Cadastrar Pet</Link>
                 </section>
             ) : (
 
@@ -56,7 +51,7 @@ export default function LogIn() {
 
                 </section>
             )}
-        </>
+        </section>
     )
 }
 

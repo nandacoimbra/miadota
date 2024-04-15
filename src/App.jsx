@@ -1,12 +1,12 @@
 
+import './global.css';
+import './App.css';
 import Navbar from './components/Navbar.jsx';
 import Banner from './components/Banner.jsx';
 import Card from './components/Card.jsx';
 import Footer from './components/Footer.jsx';
 import CadastroPet from './components/CadastroPet.jsx';
-
-import './global.css';
-import './App.css';
+//imagens para os pets já cadastrados
 import nick from './assets/adoption_cats/nick.jpg';
 import timtim from './assets/adoption_cats/timtim.jpg';
 import pingo from './assets/adoption_cats/pingo.jpg';
@@ -14,10 +14,13 @@ import luna from './assets/adoption_cats/luna.jpg';
 import { useState } from 'react';
 import LogIn from './components/LogIn.jsx';
 import About from './components/About.jsx';
+import { Routes, Route } from 'react-router-dom';
 
 
 
 export function App() {
+
+  //lista de objetos de pets
 
   const [pets, setPets] = useState([
     {
@@ -55,40 +58,49 @@ export function App() {
     }
   ])
 
+  const [logged, setLogged] = useState();
 
-
-
+  //add um novo pet na lista de objetos 
   function addPet(newPet) {
     setPets([...pets, newPet])
   }
 
   return (
 
-    <>
+    
+    <main>
       <Navbar />
+      <Routes className=''>
 
-     
-      <Banner />
+        <Route path='/' element={<Banner />} />
+        <Route path='/sobre' element={<About />} />
+        <Route path='/login' element={<LogIn logged={logged} setLogged={setLogged}/>} />
+        <Route path='/cadastro' element={<CadastroPet logged={logged} onSubmit={addPet} />} />
+        <Route path='/adotar' element={<section className='pets'>
 
-      <section className='pets'>
+          {pets.map((pet) => (
+            <Card key={pet.id} objPet={pet} />
+          ))}
 
-        {pets.map((pet) => (
-          <Card key={pet.id} objPet={pet} />
-        ))}
+        </section>
+
+        } />
+      </Routes>
 
 
 
-      </section>
 
-      <CadastroPet onSubmit={addPet} />
 
-      <LogIn />
+      {/* <CadastroPet onSubmit={addPet} /> */}
+
+   
 
       {/* <About /> */}
 
       <Footer />
 
-    </>
+    </main>
+  
   );
 }
 

@@ -4,7 +4,7 @@ import { Cat, Copyright, InstagramLogo, FacebookLogo, Envelope } from "phosphor-
 
 export default function Footer() {
     return (
-        <>
+        
             <footer className='footer-body'>
                 
                 <h3>MIAdota</h3>
@@ -22,6 +22,6 @@ export default function Footer() {
 
 
             </footer>
-        </>
+     
     )
 }

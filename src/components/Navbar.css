@@ -1,9 +1,13 @@
-.teste {
+.navbar {
     height: 15vh;
     width: auto;
     background-color: aqua;
-
     /* margin-bottom: 2rem; */
+
+}
+.navbar + section{
+  
+    padding-top: 15vh;
 }
 
 .my-navbar{
