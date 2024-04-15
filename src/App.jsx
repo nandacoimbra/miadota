@@ -67,27 +67,38 @@ export function App() {
 
   return (
 
-    
+
     <main className='content'>
 
       <section className='content-wrap'>
 
-      <Navbar />
-      <Routes className=''>
+        <Navbar />
+        <Routes className=''>
 
-        <Route path='/' element={<Home />} />
-        <Route path='/login' element={<LogIn logged={logged} setLogged={setLogged}/>} />
-        <Route path='/cadastro' element={<CadastroPet logged={logged} onSubmit={addPet} />} />
-        <Route path='/adotar' element={<section className='pets'>
+          <Route path='/' element={<Home />} />
+          <Route path='/login' element={<LogIn logged={logged} setLogged={setLogged} />} />
+          <Route path='/cadastro' element={
+            <section>
 
-          {pets.map((pet) => (
-            <Card key={pet.id} objPet={pet} />
-          ))}
+              <h3>Cadastro de pet</h3>
+              <CadastroPet logged={logged} onSubmit={addPet} />
+            </section>
+          }
+          />
+          <Route path='/adotar' element={<section className='pets'>
 
-        </section>
+            <h3>Pets disponíveis para adoção</h3>
+            <div className='pets-container'>
 
-        } />
-      </Routes>
+              {pets.map((pet) => (
+                <Card key={pet.id} objPet={pet} />
+              ))}
+            </div>
+
+          </section>
+
+          } />
+        </Routes>
 
 
       </section>
@@ -96,14 +107,14 @@ export function App() {
 
       {/* <CadastroPet onSubmit={addPet} /> */}
 
-   
+
 
       {/* <About /> */}
 
       <Footer />
 
     </main>
-  
+
   );
 }
 

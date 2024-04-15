@@ -12,3 +12,11 @@
 
     --card-color: #E5E5E5;
 }
+
+@media screen and (max-width:700px) {
+    
+    *{
+        font-size: .9rem;
+    }
+
+}

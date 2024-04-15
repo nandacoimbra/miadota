@@ -1,5 +1,5 @@
 import './Navbar.css'
-import { Cat } from "phosphor-react";
+import { Cat,SignIn } from "phosphor-react";
 import {Link} from 'react-router-dom'
 import { useState} from 'react';
 
@@ -13,7 +13,7 @@ export default function Navbar() {
             <nav className="navbar navbar-expand-lg bg-body-tertiary teste fixed-top">
                 <div className="container-fluid">
                     
-                    <Link to='/' className="navbar-brand"><Cat size={50} /> Miadota</Link>
+                    <Link to='/' className="navbar-brand"><div><Cat size={50} alt='Home'/> MIAdota</div></Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation" onClick={()=>setHamburgerOn(!hamburgerOn)}>
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -31,7 +31,8 @@ export default function Navbar() {
                                 <Link to='/cadastro' className="nav-link">Cadastrar Pet</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link " href="#">Contato</a>
+                                <Link to='/login'className="nav-link " ><SignIn size={30} alt='Entrar'/></Link>
+                                
                             </li>
                         </ul>
                         {/* <form className="d-flex" role="search">

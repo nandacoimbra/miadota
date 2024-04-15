@@ -13,6 +13,7 @@
 .my-navbar{
     width: 100%;
     justify-content: flex-end !important; 
+    align-items: center;
     gap: 2rem;
     background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
 }

@@ -61,3 +61,20 @@
     border-radius: .5rem;
     
 }
+
+@media screen and (max-width:600px) {
+    
+    .home-page{
+        width: 100%;
+        min-height: 85vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        background-color: #92B6B1;
+        
+    }
+
+
+}

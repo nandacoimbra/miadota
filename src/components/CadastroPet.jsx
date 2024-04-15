@@ -13,12 +13,17 @@ export default function CadastroPet({ logged, onSubmit }) {
     const [city, setCity] = useState('');
     const [estado, setEstado] = useState('');
     const [file, setFile] = useState();
+    const [cadastro, setCadastro] = useState(false);
     const fileInputRef = useRef(null); // Adicionando uma referência ao elemento de entrada de arquivo
 
     useEffect(() => {
         if (!logged) {
             navigate("/login")
             alert("Necessário realizar o Log In")
+        }
+        if(cadastro){
+            
+            navigate("/adotar")
         }
     });
 
@@ -46,6 +51,7 @@ export default function CadastroPet({ logged, onSubmit }) {
             petState: estado
         };
         onSubmit(pet);
+        setCadastro(true)
         resetForm();
     }
 

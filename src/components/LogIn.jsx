@@ -24,7 +24,6 @@ export default function LogIn({logged, setLogged}) {
 
         <section className='login-page'>
 
-            <h3>Efetuar Log In</h3>
             {logged ? (
                 <section className='login-success'>
                     <h3>Você está logado!</h3>
@@ -32,8 +31,9 @@ export default function LogIn({logged, setLogged}) {
                     <Link to='/cadastro'>Cadastrar Pet</Link>
                 </section>
             ) : (
-
+                
                 <section className='log-in'>
+                   
                    
                     <h4>Log In</h4>
                    
