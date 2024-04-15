@@ -1,5 +1,5 @@
 
-
+/* 
 #container{
     display: inline-block;
     position: relative;
@@ -17,4 +17,47 @@
 
 .banner-img{
     width: 100%;
+} */
+
+
+.home-page{
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    background-color: #92B6B1;
+    
+}
+
+.home-img{
+    width:300px;
+    height: 300px;
+    overflow: hidden;
+}
+.home-img img{
+    width:100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.home-text p {
+    margin-bottom: 0;
+}
+
+.home-btns{
+    display: flex;
+    justify-content: center;
+    margin: .5rem;
+}
+
+.home-btns button{
+    width: 8rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    
 }

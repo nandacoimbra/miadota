@@ -84,7 +84,7 @@ export function App() {
 
       <LogIn />
 
-      <About />
+      {/* <About /> */}
 
       <Footer />
 

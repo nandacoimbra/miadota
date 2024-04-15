@@ -12,13 +12,13 @@ export default function Navbar() {
 
             <nav className="navbar navbar-expand-lg bg-body-tertiary teste">
                 <div className="container-fluid">
-                    <Cat size={32} />
-                    <a className="navbar-brand" href="#">Miadota</a>
+                    
+                    <a className="navbar-brand" href="#"><Cat size={50} /> Miadota</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation" onClick={()=>setHamburgerOn(!hamburgerOn)}>
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className={(hamburgerOn? "show":"") + " collapse navbar-collapse"} id="navbarScroll">
-                        <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" >
+                    <div className={(hamburgerOn? "show change-color":"") + " collapse navbar-collapse"} id="navbarScroll">
+                        <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll my-navbar" >
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="#">Sobre</a>
                             </li>
@@ -27,10 +27,10 @@ export default function Navbar() {
                             </li>
 
                             <li className="nav-item">
-                                <a className="nav-link " aria-disabled="true">Cadastrar Pet</a>
+                                <a className="nav-link ">Cadastrar Pet</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link " aria-disabled="true">Contato</a>
+                                <a className="nav-link ">Contato</a>
                             </li>
                         </ul>
                         {/* <form className="d-flex" role="search">

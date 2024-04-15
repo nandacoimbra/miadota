@@ -1,8 +1,31 @@
 .teste {
-    /* height: 30vh; */
+    height: 15vh;
     width: auto;
     background-color: aqua;
+
     /* margin-bottom: 2rem; */
+}
+
+.my-navbar{
+    width: 100%;
+    justify-content: flex-end !important; 
+    gap: 2rem;
+    background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.navbar-brand{
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.change-color ul li{
+   
+    padding: 0 1rem;
+   
+    
 }
 
 
