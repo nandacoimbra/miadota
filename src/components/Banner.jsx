@@ -1,5 +1,6 @@
 import './Banner.css'
 import bannerImg1 from '../assets/banner_imgs/cat-dog-2.jpg';
+import { Link } from 'react-router-dom'
 
 export default function Banner() {
     return (
@@ -14,7 +15,7 @@ export default function Banner() {
                 <h1>MIAdota</h1>
                 <p>Venha buscar seu melhor amigo!</p>
             <div className='home-btns'>
-                <button>Adotar</button>
+                <Link to='/adotar' className='banner-btn'><button >Adotar</button></Link>
             </div>
             </div>
         </section>

@@ -1,10 +1,18 @@
 import React from 'react'
+import './LogIn.css';
 
 const Adotar = () => {
   return (
-    <div>
-      <h3></h3>
-    </div>
+    <section className='login-page'>
+
+
+      <section className='login-success'>
+        <h3>Seu interesse no pet foi registrado!</h3>
+        <br />
+        <p>Aguarde nossa equipe entrar em contato.</p>
+      </section>
+        
+    </section>
   )
 }
 

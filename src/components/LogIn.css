@@ -54,3 +54,8 @@
     border-radius: 8px;
     padding: 3rem;
 }
+
+.login-btn{
+    display: flex;
+    gap: .5rem;
+}

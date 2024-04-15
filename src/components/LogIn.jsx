@@ -1,15 +1,15 @@
 import { useState, useRef, useEffect } from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './LogIn.css';
 
-export default function LogIn({logged, setLogged}) {
+export default function LogIn({ logged, setLogged }) {
 
     const userRef = useRef('');
     const [user, setUser] = useState('');
     const [password, setPassword] = useState('');
-    
 
- 
+
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -28,15 +28,22 @@ export default function LogIn({logged, setLogged}) {
                 <section className='login-success'>
                     <h3>Você está logado!</h3>
                     <br />
-                    <Link to='/cadastro'>Cadastrar Pet</Link>
+                    
+                       <div className='login-btn'>
+
+                       <button><Link to='/cadastro' className='btn'>Cadastrar Pet</Link></button> 
+                       <button> <Link to='/adocao' className='btn'>Adotar Pet</Link></button>
+                       </div>
+                   
+
                 </section>
             ) : (
-                
+
                 <section className='log-in'>
-                   
-                   
+
+
                     <h4>Log In</h4>
-                   
+
                     <form onSubmit={handleSubmit}>
                         <label htmlFor="username">Usuário: </label>
                         <input type="text" id="username" ref={userRef} onChange={(e) => setUser(e.target.value)} value={user} required />

@@ -1,9 +1,29 @@
 import './Card.css';
 import catImg from "../assets/adoption_cats/nick.jpg";
+import { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import { MapPinLine } from "phosphor-react";
 
-export default function Card({objPet}) {
+export default function Card({ objPet, logged }) {
+
+    const navigate = useNavigate();
+
+    const [click, setClick] = useState(false);
+
+    useEffect(() => {
+        if (click && logged) {
+            navigate("/adocao");
+
+        } else {
+            if (click && !logged) {
+                navigate("/login")
+                alert("Necessário realizar o Log In")
+            }
+        }
+
+    });
     return (
+
         <>
             <section className='card_body' key={objPet.id}>
                 <div className='img-container'>
@@ -16,7 +36,7 @@ export default function Card({objPet}) {
                         <MapPinLine size={25} />
                         <p>{objPet.petCity} - {objPet.petState}</p>
                     </div>
-                    <button> Tenho interesse</button>
+                    <button onClick={() => setClick(true)}>Adotar</button>
                     {/* <a href="">Tenho interesse</a> */}
                 </div>
             </section>

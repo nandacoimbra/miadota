@@ -14,6 +14,7 @@ import luna from './assets/adoption_cats/luna.jpg';
 import { useState } from 'react';
 import LogIn from './components/LogIn.jsx';
 import Home from './components/Home.jsx';
+import Adotar from './components/Adotar.jsx';
 import { Routes, Route } from 'react-router-dom';
 
 
@@ -76,6 +77,7 @@ export function App() {
         <Routes className=''>
 
           <Route path='/' element={<Home />} />
+          <Route path='/adocao' element={<Adotar />} />
           <Route path='/login' element={<LogIn logged={logged} setLogged={setLogged} />} />
           <Route path='/cadastro' element={
             <section>
@@ -91,7 +93,7 @@ export function App() {
             <div className='pets-container'>
 
               {pets.map((pet) => (
-                <Card key={pet.id} objPet={pet} />
+                <Card key={pet.id} objPet={pet} logged={logged}/>
               ))}
             </div>
 
