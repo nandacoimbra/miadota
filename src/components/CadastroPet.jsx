@@ -64,7 +64,7 @@ export default function CadastroPet({ logged, onSubmit }) {
 
         <section className='cadastro-page'>
             <section className='cadastro'>
-                <h3>Informações do Pet</h3>
+                <h4>Informações do Pet</h4>
 
                 <form className='cadastro-form' onSubmit={handleSubmit}>
 
