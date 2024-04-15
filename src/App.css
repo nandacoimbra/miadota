@@ -15,3 +15,12 @@
   align-items: center;
   flex-wrap: wrap;
 }
+
+.content{
+  position: relative;
+  min-height: 100vh;
+}
+
+.content-wrap{
+  padding-bottom: 6.25rem;
+}

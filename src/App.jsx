@@ -68,7 +68,10 @@ export function App() {
   return (
 
     
-    <main>
+    <main className='content'>
+
+      <section className='content-wrap'>
+
       <Navbar />
       <Routes className=''>
 
@@ -87,6 +90,7 @@ export function App() {
       </Routes>
 
 
+      </section>
 
 
 
