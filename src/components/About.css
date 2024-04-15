@@ -19,6 +19,9 @@
     width: 70%;
     text-align: justify;
 }
+.about-text h3{
+  text-align: left;
+}
 .about-text .first-big::first-letter {
     font-size: 3em; /* Tamanho da primeira letra */
     font-weight: bold; /* Peso da fonte da primeira letra (opcional) */

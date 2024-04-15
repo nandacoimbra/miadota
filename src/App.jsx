@@ -53,7 +53,7 @@ export function App() {
       id: 4,
       petImg: luna,
       petName: "Luna",
-      petSex: "Femea",
+      petSex: "femea",
       petCity: "Leopoldina",
       petState: "MG"
     }
