@@ -16,7 +16,8 @@ export default function Card({objPet}) {
                         <MapPinLine size={25} />
                         <p>{objPet.petCity} - {objPet.petState}</p>
                     </div>
-                    <a href="">Saber mais</a>
+                    <button> Tenho interesse</button>
+                    {/* <a href="">Tenho interesse</a> */}
                 </div>
             </section>
         </>

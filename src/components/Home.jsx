@@ -1,6 +1,6 @@
 import './Home.css'
-import Banner from './components/Banner.jsx';
-import About from './components/About.jsx';
+import Banner from './Banner.jsx';
+import About from './About.jsx';
 
 export default function Home() {
     return (

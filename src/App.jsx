@@ -13,7 +13,7 @@ import pingo from './assets/adoption_cats/pingo.jpg';
 import luna from './assets/adoption_cats/luna.jpg';
 import { useState } from 'react';
 import LogIn from './components/LogIn.jsx';
-import About from './components/About.jsx';
+import Home from './components/Home.jsx';
 import { Routes, Route } from 'react-router-dom';
 
 
@@ -72,8 +72,7 @@ export function App() {
       <Navbar />
       <Routes className=''>
 
-        <Route path='/' element={<Banner />} />
-        <Route path='/sobre' element={<About />} />
+        <Route path='/' element={<Home />} />
         <Route path='/login' element={<LogIn logged={logged} setLogged={setLogged}/>} />
         <Route path='/cadastro' element={<CadastroPet logged={logged} onSubmit={addPet} />} />
         <Route path='/adotar' element={<section className='pets'>

@@ -7,41 +7,34 @@
 .about-home{
     width: 100%;
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .about-text{
-    width: 60%;
+    width: 50%;
+    text-align: justify;
 }
+.about-text p::first-letter {
+    font-size: 3em; /* Tamanho da primeira letra */
+    font-weight: bold; /* Peso da fonte da primeira letra (opcional) */
+    margin-right: .5rem;
+    float: left;
+    /* Outros estilos desejados para a primeira letra */
+  }
+
+
 
 .about-imgs {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-        "img-1 img-1 img-3 img-3"
-        "img-1 img-1 img-3 img-3"
-        "img-2 img-2 img-3 img-3"
-        "img-2 img-2 img-3 img-3";
+    width: 100%;
+    height: 100%;
+}
+.about-imgs .img-1{
+    max-width: 50%;
+    height: 60%;
+    object-fit: cover;
 }
 
 
-.img-1 {
-    grid-area: img-1;
-    max-width: 100%;
-    max-height: 100%;
-}
 
-.img-3 {
-    grid-area: img-3;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.img-2 {
-    grid-area: img-2;
-    max-width: 100%;
-    max-height: 100%;
-}
 

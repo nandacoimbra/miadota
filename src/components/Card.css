@@ -77,7 +77,7 @@
 
 }
 
-.card_footer a {
+.card_footer button {
     display: flex;
     align-items: center;
     justify-content: center;
