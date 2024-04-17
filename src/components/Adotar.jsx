@@ -1,7 +1,7 @@
 import React from 'react'
 import './LogIn.css';
 import './Adotar.css';
-import { Cat,Dog,Heart } from "phosphor-react";
+import { Heart } from "phosphor-react";
 
 const Adotar = () => {
   return (
