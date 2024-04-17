@@ -1,5 +1,4 @@
 import './Card.css';
-import catImg from "../assets/adoption_cats/nick.jpg";
 import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { MapPinLine } from "phosphor-react";

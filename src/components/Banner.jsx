@@ -14,12 +14,12 @@ export default function Banner() {
                 <p>Olá! Somos a</p>
                 <h1>MIAdota</h1>
                 <p>Venha buscar seu melhor amigo!</p>
-            <div className='home-btns'>
-                <Link to='/adotar' className='banner-btn'><button >Adotar</button></Link>
-            </div>
+                <div className='home-btns'>
+                    <Link to='/adotar' className='banner-btn'><button >Adotar</button></Link>
+                </div>
             </div>
         </section>
-       
+
     )
 }
 

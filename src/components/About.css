@@ -1,22 +1,27 @@
+
+.about-container{
+    padding: 0 2rem;
+}
+
 .about-us {
     width: 100%;
     display: flex;
     gap: 1rem;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    margin-top: 2rem;
 }
 
 .about-home{
-    width: 100%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    
 }
 
 .about-text{
-    width: 70%;
+    width: 85%;
     text-align: justify;
 }
 .about-text h3{
@@ -33,9 +38,19 @@
 
 .numeros{
     display: flex;
+    min-height: 75px;
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    background-color: #92B6B1;
+    padding: .5rem;
+    
+}
+.numeros p{
+    margin: 0;
+    max-width: 100%;
+    max-height: 100%;
+    
 }
 
 .num{
@@ -48,6 +63,10 @@
 .about-img-container{
     
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
   
 }
 
@@ -57,6 +76,19 @@
    border-radius: 1rem;
 }
 
+.missao{
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+    
+}
+
+
+
+.mvv p{
+    text-align: justify;
+
+}
 
 @media screen and (max-width:1100px) {
     .about-us {
@@ -67,6 +99,16 @@
         align-items: center;
         justify-content: center;
         padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .missao{
+        display: flex;
+        gap: 3rem;
+        margin-top: 2rem;
+        padding:0 3rem;
+        flex-direction: column;
     }
 }
 @media screen and (max-width:700px) {

@@ -7,7 +7,6 @@ const Adotar = () => {
   return (
     <section className='login-page'>
 
-
       <section className='login-success'>
         <h3>Seu interesse no pet foi registrado!</h3>
         <br />

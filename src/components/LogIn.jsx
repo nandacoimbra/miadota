@@ -9,16 +9,12 @@ export default function LogIn({ logged, setLogged }) {
     const [password, setPassword] = useState('');
 
 
-
-
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(user, password);
         setUser('');
         setPassword('');
         setLogged(true);
     }
-
 
     return (
 
@@ -28,11 +24,9 @@ export default function LogIn({ logged, setLogged }) {
                 <section className='login-success'>
                     <h3>Você está logado!</h3>
                     <br />
-                    
                        <div className='login-btn'>
-
                        <button><Link to='/cadastro' className='btn'>Cadastrar Pet</Link></button> 
-                       <button> <Link to='/adocao' className='btn'>Adotar Pet</Link></button>
+                       <button> <Link to='/adotar' className='btn'>Adotar Pet</Link></button>
                        </div>
                    
 
