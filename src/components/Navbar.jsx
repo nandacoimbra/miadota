@@ -18,20 +18,21 @@ export default function Navbar() {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className={(hamburgerOn? "show change-color":"") + " collapse navbar-collapse"} id="navbarScroll">
+
                         <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll my-navbar" >
                             <li className="nav-item">
                                 <Link to='/'  className="nav-link active">Home</Link>
-                                {/* <a className="nav-link active" aria-current="page" href="#">Sobre</a> */}
+                              
                             </li>
                             <li className="nav-item">
-                            <Link to='/adotar' className="nav-link">Adotar</Link>
+                            <Link to='/adotar' className="nav-link" onClick={()=>setHamburgerOn(false)}>Adotar</Link>
                             </li>
 
                             <li className="nav-item">
-                                <Link to='/cadastro' className="nav-link">Cadastrar Pet</Link>
+                                <Link to='/cadastro' className="nav-link" onClick={()=>setHamburgerOn(false)}>Cadastrar Pet</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to='/login'className="nav-link " ><SignIn size={30} alt='Entrar'/></Link>
+                                <Link to='/login'className="nav-link " onClick={()=>setHamburgerOn(false)}><SignIn size={30} alt='Entrar'/></Link>
                                 
                             </li>
                         </ul>

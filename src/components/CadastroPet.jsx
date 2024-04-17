@@ -4,6 +4,9 @@ import { useNavigate } from "react-router-dom";
 // import catImg from "../assets/adoption_cats/nick.jpg";
 // import { MapPinLine } from "phosphor-react";
 
+
+
+//funcao
 export default function CadastroPet({ logged, onSubmit }) {
 
     const navigate = useNavigate();
