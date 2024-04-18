@@ -14,7 +14,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #92B6B1;
+    background-color: antiquewhite;
+    /* background-color: #92B6B1; */
     
 }
 .contact-us form button{
