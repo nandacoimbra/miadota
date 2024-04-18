@@ -1,0 +1,47 @@
+
+.contact-us{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contact-us form{
+    width: 50%;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #92B6B1;
+    
+}
+.contact-us form button{
+    width: 8rem;
+    margin: 1rem;
+    align-self: center;
+    
+    
+}
+
+.contact-us form div{
+   
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width:600px) {
+
+    .contact-us form{
+        width: 80%;
+        padding: 2rem;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #92B6B1;
+        
+    }
+
+}
