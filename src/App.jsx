@@ -21,8 +21,7 @@ import { Routes, Route } from 'react-router-dom';
 
 export function App() {
 
-  //lista de objetos de pets
-
+  //lista de objetos de pets 
   const [pets, setPets] = useState([
     {
       id: 1,
@@ -59,6 +58,7 @@ export function App() {
     }
   ])
 
+  //define o estado para o login (true - logado)
   const [logged, setLogged] = useState();
 
   //add um novo pet na lista de objetos 
@@ -75,7 +75,7 @@ export function App() {
 
         <Navbar />
         <Routes className=''>
-
+          
           <Route path='/' element={<Home />} />
           <Route path='/adocao' element={<Adotar />} />
           <Route path='/login' element={<LogIn logged={logged} setLogged={setLogged} />} />

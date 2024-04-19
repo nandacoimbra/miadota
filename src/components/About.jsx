@@ -1,10 +1,11 @@
 import './About.css'
 import Contato from './Contato';
 import { Target, Eye, SketchLogo } from "phosphor-react";
-import { Link } from 'react-router-dom'
 import aboutImg from '../assets/banner_imgs/cat-person.jpg';
 
 export default function About() {
+
+    //home page
     return (
 
         <section className='about-us'>

@@ -2,6 +2,8 @@ import React from 'react'
 import './Contato.css'
 
 const Contato = () => {
+    
+    //formulario para contato
     return (
         <section className='contact-us'>
 

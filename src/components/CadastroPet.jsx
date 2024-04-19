@@ -10,15 +10,22 @@ import { useNavigate } from "react-router-dom";
 export default function CadastroPet({ logged, onSubmit }) {
 
     const navigate = useNavigate();
-
+    //nome do pet
     const [name, setName] = useState('');
+    //sexo do pet
     const [sex, setSex] = useState('femea');
+    //cidade do pet
     const [city, setCity] = useState('');
+    //estado do pet
     const [estado, setEstado] = useState('');
+    //foto do pet
     const [file, setFile] = useState();
+    //estado que define 
     const [cadastro, setCadastro] = useState(false);
     const fileInputRef = useRef(null); // Adicionando uma referência ao elemento de entrada de arquivo
 
+
+    //verifica se o usuário já está logado
     useEffect(() => {
         if (!logged) {
             navigate("/login")
