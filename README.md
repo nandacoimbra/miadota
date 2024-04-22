@@ -3,7 +3,9 @@
 Site de cadastro de pets disponíveis para adoção.
 Projeto final da disciplina Codificação para Front-end do curso de Programação Full Stack do Programa Rio Pomba Valley.
 
-Tecnologias utilizadas:
+Link do projeto no Vercel: https://miadota-seven.vercel.app/
+
+## Tecnologias utilizadas:
 
 - React (JavaScript);
 - Bootstrap.
