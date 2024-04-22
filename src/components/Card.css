@@ -10,11 +10,12 @@
     border-radius: 8px;
 }
 
+ /* Para imgs panorâmicas ou paisagem, a iamgem aparece cortada no card (será corrigido)*/
+
 .img-container {
     border-radius: 8px;
     border: 1px solid gray;
     width: 100%;
-    /* Garante que o container tenha a largura máxima disponível */
     height: 50%;
     overflow: hidden;
     /* Esconde qualquer parte da imagem que ultrapasse os limites do container */
@@ -24,26 +25,9 @@
 }
 
 .img-container img {
-    /* width: 100%; */
-    /* Garante que a imagem ocupe toda a largura do container */
-
     height: 300px;
-    /* Garante que a imagem ocupe toda a altura do container */
     object-fit: cover; 
-    /* Mantém a proporção da imagem e a corta para preencher o container */
 }
-
-/* .pet_image {
-    max-width: 100%;
-    height: auto;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
-.img-container {
-    width: 100%;
-    height: auto; 
-    overflow: hidden; 
-  } */
 
 
 .card_footer {
@@ -92,4 +76,8 @@
     color: var(--card-color);
     padding: .3rem;
     border-radius: 3px;
+}
+.card_footer button:hover {
+    transform: scale(1.05);
+    transition: 0.1s ease-in-out;
 }

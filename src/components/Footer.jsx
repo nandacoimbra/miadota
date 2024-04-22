@@ -1,7 +1,7 @@
 import './Footer.css';
-import catImg from "../assets/adoption_cats/nick.jpg";
 import { Cat, Copyright, InstagramLogo, FacebookLogo, Envelope } from "phosphor-react";
 
+//Ainda em construção
 export default function Footer() {
     return (
         

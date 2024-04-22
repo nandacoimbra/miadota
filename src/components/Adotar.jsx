@@ -1,8 +1,12 @@
 import React from 'react'
+//aproveita styles do form de login
 import './LogIn.css';
 import './Adotar.css';
+//logo de coracao
 import { Heart } from "phosphor-react";
 
+//pag mostrada após clicar no botao "Adotar", na pag de pets
+//disponiveis para adocao,já estando logado
 const Adotar = () => {
   return (
     <section className='login-page'>

@@ -5,7 +5,7 @@ import aboutImg from '../assets/banner_imgs/cat-person.jpg';
 
 export default function About() {
 
-    //home page
+    //home page (ainda em construçao)
     return (
 
         <section className='about-us'>

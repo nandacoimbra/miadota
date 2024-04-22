@@ -1,5 +1,4 @@
-
-.login-page{
+.login-page {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,16 +7,16 @@
     height: 100%;
 }
 
-.login-page h3{
+.login-page h3 {
     margin: 1rem;
 }
 
-.log-in{
+.log-in {
     display: flex;
     flex-direction: column;
     width: 25rem;
     min-height: 20rem;
-    margin:2rem;
+    margin: 2rem;
     box-shadow: inset 0 -3em 3em rgba(235, 241, 235, 0.3),
         0 0 0 2px var(--card-color),
         0.3em 0.3em 1em rgba(0, 0, 0, 0.6);
@@ -26,20 +25,22 @@
     padding: 3rem;
 }
 
-.log-in input{
+.log-in input {
     width: 100%;
 }
-.log-in form{
+
+.log-in form {
     display: flex;
     flex-direction: column;
 }
-.log-in button{
+
+.log-in button {
     width: 50%;
     align-self: center;
     margin: 1rem;
 }
 
-.login-success{
+.login-success {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,9 +56,27 @@
     padding: 3rem;
 }
 
-.login-btn{
+.login-btn {
     display: flex;
     gap: .5rem;
     align-items: center;
     justify-content: center;
+}
+
+.login-btn:hover {
+
+    background-color: var(--btn-green);
+    color: white;
+}
+
+.creat-account{
+    text-decoration: none;
+    cursor: pointer;
+    width: 45%;
+    color: var(--btn-green);
+    
+}
+
+.login-btn-2{
+    padding: .5rem;
 }

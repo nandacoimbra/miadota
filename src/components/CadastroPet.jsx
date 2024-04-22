@@ -1,12 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import './CadastroPet.css';
 import { useNavigate } from "react-router-dom";
-// import catImg from "../assets/adoption_cats/nick.jpg";
-// import { MapPinLine } from "phosphor-react";
 
 
-
-//funcao
 export default function CadastroPet({ logged, onSubmit }) {
 
     const navigate = useNavigate();
@@ -20,23 +16,25 @@ export default function CadastroPet({ logged, onSubmit }) {
     const [estado, setEstado] = useState('');
     //foto do pet
     const [file, setFile] = useState();
-    //estado que define 
     const [cadastro, setCadastro] = useState(false);
     const fileInputRef = useRef(null); // Adicionando uma referência ao elemento de entrada de arquivo
 
 
-    //verifica se o usuário já está logado
+    //verifica se o usuário já está logado, se sim, navega pra pag de pets para adocao
     useEffect(() => {
         if (!logged) {
             navigate("/login")
             alert("Necessário realizar o Log In")
         }
+        //se o form já foi enviado, o pet foi cadastrado, entao direciona
+        //para a pag de pets disponiveis
         if(cadastro){
             
             navigate("/adotar")
         }
     });
 
+    //funcao que limpa os dados do form apos cadastro
     function resetForm() {
         setName("");
         setSex("femea");
@@ -51,6 +49,8 @@ export default function CadastroPet({ logged, onSubmit }) {
 
     function handleSubmit(e) {
         e.preventDefault();
+
+        //cria um obj pet e passa os valores coletados no form
         const pet =
         {
             id: crypto.randomUUID(),
@@ -65,6 +65,7 @@ export default function CadastroPet({ logged, onSubmit }) {
         resetForm();
     }
 
+    //upload da img do pet
     function handleFileChange(e) {
         console.log(e.target.files);
         setFile(URL.createObjectURL(e.target.files[0]));
@@ -77,7 +78,7 @@ export default function CadastroPet({ logged, onSubmit }) {
                 <h4>Informações do Pet</h4>
 
                 <form className='cadastro-form' onSubmit={handleSubmit}>
-
+                    
                     <label htmlFor="">Nome: </label>
                     <input type="text" value={name} onChange={e => setName(e.target.value)} required />
 

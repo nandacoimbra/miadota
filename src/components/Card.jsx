@@ -7,13 +7,16 @@ export default function Card({ objPet, logged }) {
 
     const navigate = useNavigate();
 
+    //monitorar o click no botao de adotar
     const [click, setClick] = useState(false);
 
     useEffect(() => {
+        //se clicar em adotar e estiver logado, navega para a pag "Adotar"
         if (click && logged) {
             navigate("/adocao");
 
         } else {
+            //se clicar em adotar e não estiver logado, navega para a pag "Login"
             if (click && !logged) {
                 navigate("/login")
                 alert("Necessário realizar o Log In")
@@ -24,6 +27,7 @@ export default function Card({ objPet, logged }) {
     return (
 
         <>
+            {/* recebe os objetos da lista de pets declarada no App.jsx e/ou de um cadastro de pet */}
             <section className='card_body' key={objPet.id}>
                 <div className='img-container'>
                     <img src={objPet.petImg} alt="" className='pet_image' />
@@ -35,8 +39,8 @@ export default function Card({ objPet, logged }) {
                         <MapPinLine size={25} />
                         <p>{objPet.petCity} - {objPet.petState}</p>
                     </div>
-                    <button onClick={() => setClick(true)}>Adotar</button>
-                    {/* <a href="">Tenho interesse</a> */}
+                    <button onClick={() => setClick(true)} className='btn-adopt'>Adotar</button>
+                   
                 </div>
             </section>
         </>

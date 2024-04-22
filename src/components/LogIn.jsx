@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom'
 import './LogIn.css';
 
@@ -8,11 +8,13 @@ export default function LogIn({ logged, setLogged }) {
     const [user, setUser] = useState('');
     const [password, setPassword] = useState('');
 
-
     const handleSubmit = (e) => {
+        // impede que o navegador execute a ação padrão associada ao evento, que neste caso é recarregar a página ou enviar uma requisição ao servidor.
         e.preventDefault();
+        //limpa os campos
         setUser('');
         setPassword('');
+        //seta o estado logged (declarado no App.jsx) para true
         setLogged(true);
     }
 
@@ -20,25 +22,22 @@ export default function LogIn({ logged, setLogged }) {
 
         <section className='login-page'>
 
+            {/* se o usuario esta logado (logged=true) */}
             {logged ? (
                 <section className='login-success'>
                     <h3>Você está logado!</h3>
                     <br />
-                       <div className='login-btn'>
-                       <button><Link to='/cadastro' className='btn'>Cadastrar Pet</Link></button> 
-                       <button> <Link to='/adotar' className='btn'>Adotar Pet</Link></button>
+                       <div>
+                      <Link to='/cadastro' className='btn'><button className='login-btn login-btn-2'>Cadastrar Pet</button></Link>
+                        <Link to='/adotar' className='btn'><button className='login-btn login-btn-2'>Adotar Pet</button></Link>
                        </div>
-                   
-
                 </section>
             ) : (
 
                 <section className='log-in'>
-
-
                     <h4>Log In</h4>
 
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} autoComplete='off'>
                         <label htmlFor="username">Usuário: </label>
                         <input type="text" id="username" ref={userRef} onChange={(e) => setUser(e.target.value)} value={user} required />
 
@@ -48,7 +47,8 @@ export default function LogIn({ logged, setLogged }) {
                         <button className='login-btn'>Log In</button>
                     </form>
 
-                    <a href="#">Criar uma conta</a>
+                    {/* em construcao */}
+                    <a href="" className='creat-account'>Criar uma conta</a>
 
                 </section>
             )}

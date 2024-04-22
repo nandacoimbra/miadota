@@ -5,11 +5,12 @@ import { useState} from 'react';
 
 export default function Navbar() {
 
+    //variavel de estado que vai monitorar se o menu hamburguer esta aberto ou nao
     const [hamburgerOn, setHamburgerOn] = useState(false);
 
     return (
         <>
-
+            {/*modelo de navbar retirada do Boostrap*/}
             <nav className="navbar navbar-expand-lg bg-body-tertiary teste fixed-top">
                 <div className="container-fluid">
                     
@@ -17,6 +18,7 @@ export default function Navbar() {
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation" onClick={()=>setHamburgerOn(!hamburgerOn)}>
                         <span className="navbar-toggler-icon"></span>
                     </button>
+                    {/* se o menu hamburguer estiver aberto, adiciona as classes show e change-color */}
                     <div className={(hamburgerOn? "show change-color":"") + " collapse navbar-collapse"} id="navbarScroll">
 
                         <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll my-navbar" >

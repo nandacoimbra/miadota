@@ -2,7 +2,6 @@
 import './global.css';
 import './App.css';
 import Navbar from './components/Navbar.jsx';
-import Banner from './components/Banner.jsx';
 import Card from './components/Card.jsx';
 import Footer from './components/Footer.jsx';
 import CadastroPet from './components/CadastroPet.jsx';
@@ -68,14 +67,13 @@ export function App() {
 
   return (
 
-
+    //content e content-wrap adicionados somente para a estilização, será modificado depois
     <main className='content'>
 
       <section className='content-wrap'>
 
         <Navbar />
         <Routes className=''>
-          
           <Route path='/' element={<Home />} />
           <Route path='/adocao' element={<Adotar />} />
           <Route path='/login' element={<LogIn logged={logged} setLogged={setLogged} />} />
