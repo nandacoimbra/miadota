@@ -33,9 +33,9 @@ export default function Navbar() {
                             <li className="nav-item">
                                 <Link to='/cadastro' className="nav-link" onClick={()=>setHamburgerOn(false)}>Cadastrar Pet</Link>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link to='/' className="nav-link" onClick={()=>setHamburgerOn(false)}>Contato</Link>
-                            </li>
+                            </li> */}
                             <li className="nav-item">
                                 <Link to='/login'className="nav-link " onClick={()=>setHamburgerOn(false)}><SignIn size={30} alt='Entrar'/></Link>
                                 

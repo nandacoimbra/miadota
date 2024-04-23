@@ -8,12 +8,14 @@
 }
 
 .contact-us form{
-    width: 50%;
+    width: 40%;
     padding: 2rem;
+    margin-top: 1rem;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     background-color: #92B6B1;
     
 }

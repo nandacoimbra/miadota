@@ -80,7 +80,7 @@ export function App() {
           <Route path='/cadastro' element={
             <section>
 
-              <h3>Cadastro de pet</h3>
+              <h3 className='home-title'>Cadastro de pet</h3>
               <CadastroPet logged={logged} onSubmit={addPet} />
             </section>
           }

@@ -1,17 +1,10 @@
 
-/* @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
 h3{
   text-align: center;
   padding-top: 1rem;
+  
 }
+
 .pets-container{
   display: flex;
   justify-content: space-around;
