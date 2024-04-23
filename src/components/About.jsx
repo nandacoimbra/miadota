@@ -56,7 +56,7 @@ export default function About() {
                         <SketchLogo size={32} />
 
                     </div>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, iure delectus nemo impedit deleniti ducimus quod eveniet deserunt nam quidem! Voluptate quaerat unde, blanditiis commodi earum reprehenderit deleniti incidunt perferendis?
+                    <p>Com compaixão, priorizamos o bem-estar animal, garantindo adoções responsáveis e lares amorosos. Agimos com responsabilidade, conduzindo um processo transparente e ético, desde a seleção de animais até o acompanhamento pós-adoção.
                     </p>
                 </div>
 
