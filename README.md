@@ -25,6 +25,7 @@ Link do projeto no Vercel: https://miadota-seven.vercel.app/
 - Botão "adotar" na tela de pets para adoção.
 
 ## Próximas implementações
+- Melhorar acessibilidade;
 - Autenticação do login;
 - Tela do usuário, com pets cadastrados por ele e outras informações;
 - Remover pet cadastrado;
@@ -36,5 +37,5 @@ Link do projeto no Vercel: https://miadota-seven.vercel.app/
 - Outras.
   
 ## Dificuldades
-Como foi meu primeiro projeto utilizando React, algumas dificuldades foram entender e manipular os estados na aplicação e aproveitar ao máximo o recurso de "componentização". A ideia é continuar com este projeto na disciplina de Codificação para Back-end e implementar melhorias.
+Como foi meu primeiro projeto utilizando React, algumas dificuldades foram entender e manipular os estados na aplicação e aproveitar ao máximo o recurso de "componentização". A ideia é continuar com este projeto na disciplina de Codificação para Back-end e implementar mais telas e melhorias no código e design.
 
