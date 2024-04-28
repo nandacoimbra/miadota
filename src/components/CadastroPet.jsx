@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import './CadastroPet.css';
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 
 export default function CadastroPet({ logged, onSubmit }) {
@@ -18,6 +19,9 @@ export default function CadastroPet({ logged, onSubmit }) {
     const [file, setFile] = useState();
     const [cadastro, setCadastro] = useState(false);
     const fileInputRef = useRef(null); // Adicionando uma referência ao elemento de entrada de arquivo
+    const [ufs, setUfs] = useState([]);
+    const [selectedUf, setSelectedUf] = useState("0");
+    const [cities, setCities] = useState([]);
 
 
     //verifica se o usuário já está logado, se sim, navega pra pag de pets para adocao
@@ -28,11 +32,27 @@ export default function CadastroPet({ logged, onSubmit }) {
         }
         //se o form já foi enviado, o pet foi cadastrado, entao direciona
         //para a pag de pets disponiveis
-        if(cadastro){
-            
+        if (cadastro) {
+
             navigate("/adotar")
         }
     });
+
+    useEffect(() => {
+        axios.get("https://servicodados.ibge.gov.br/api/v1/localidades/estados/").then(Response => {
+            setUfs(Response.data);
+        })
+    });
+
+    useEffect(() => {
+        axios.get(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${selectedUf}/municipios`).then(Response => {
+            setCities(Response.data);
+        })
+    }, [selectedUf]);
+
+    function handleSelectedUf(e) {
+        setSelectedUf(e.target.value);
+    }
 
     //funcao que limpa os dados do form apos cadastro
     function resetForm() {
@@ -78,7 +98,7 @@ export default function CadastroPet({ logged, onSubmit }) {
                 <h4>Informações do Pet</h4>
 
                 <form className='cadastro-form' onSubmit={handleSubmit}>
-                    
+
                     <label htmlFor="">Nome: </label>
                     <input type="text" value={name} onChange={e => setName(e.target.value)} required />
 
@@ -91,15 +111,38 @@ export default function CadastroPet({ logged, onSubmit }) {
                         </select>
                     </div>
 
-                    <div className='city-name'>
-                        <label htmlFor="">Cidade:</label>
-                        <input type="text" value={city} onChange={e => setCity(e.target.value)} required />
+                    <div className="state-name">
+                        <label htmlFor="uf">Estado:</label>
+                        {/*<input type="text" value={estado} onChange={e => setEstado(e.target.value)} required /> */}
+
+                        <select name="uf" id="uf" onChange={e => {
+                            setEstado(e.target.value);
+                            handleSelectedUf(e);
+                        }
+                        }
+                            required>
+                            <option value="0">Selecione o estado</option>
+
+                            {ufs.map((uf) => {
+                                return <option key={uf.id} value={uf.sigla}>{uf.nome}</option>
+                            })}
+                        </select>
+
                     </div>
 
-                    <div className="state-name">
-                        <label htmlFor="">Estado:</label>
-                        <input type="text" value={estado} onChange={e => setEstado(e.target.value)} required />
+                    <div className='city-name'>
+                        <label htmlFor="city">Cidade:</label>
+                        {/*<input type="text" value={city} onChange={e => setCity(e.target.value)} required /> */}
+                        <select name="city" id="city" onChange={e => setCity(e.target.value)} required>
+                            <option value="0">Selecione a cidade</option>
+                            
+                            {cities.map((newCity) => (
+                                <option key={newCity.id} value={newCity.nome}>{newCity.nome}</option>
+                            ))}
+                        </select>
+
                     </div>
+
 
                     <div className="petPhoto">
                         <h6>Adicionar imagem:</h6>
